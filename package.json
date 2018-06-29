@@ -1,0 +1,31 @@
+{
+  "name": "spruceup",
+  "version": "1.0.0",
+  "description": "Spruce up your CSS classes with some JavaScript flavor",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bredele/spruceup.git"
+  },
+  "keywords": [
+    "css",
+    "react",
+    "javascript",
+    "concat"
+  ],
+  "author": "Olivier Wietrich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bredele/spruceup/issues"
+  },
+  "homepage": "https://github.com/bredele/spruceup#readme",
+  "devDependencies": {
+    "tape": "^4.9.1"
+  }
+}
