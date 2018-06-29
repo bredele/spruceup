@@ -35,3 +35,18 @@ test('should concatenate classes with arrays', assert => {
   assert.plan(1)
   assert.equal(classes('hello', ['world', 'and', 'universe']), 'hello world and universe')
 })
+
+test('should concatenate classes with arrays elements that are not booleans or falsy', assert => {
+  assert.plan(1)
+  assert.equal(classes('hello', ['world', null, true, 'and', 'universe']), 'hello world and universe')
+})
+
+test('should concatenate objects properties if truthy', assert => {
+  assert.plan(1)
+  assert.equal(classes('hello', {world: true}), 'hello world')
+})
+
+test('should concatenate classes made of objects, arrays and/or functions', assert => {
+  assert.plan(1)
+  assert.equal(classes('hello', () => 'world', null, 0, {and: true, universe: false}, 'universe'), 'hello world and universe')
+})
