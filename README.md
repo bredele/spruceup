@@ -43,10 +43,9 @@ Here's a simple example using a React component.
 import classes from 'spruceup'
 
 function Button (props) {
-  return (
-    <button className={classes('button', {
-      disabled: props.disabled
-    })}></button>
+  const {label, ...styles} = props
+  return ('
+    <button className={classes('button', styles, ['primary', 'btn'])}></button>
   )
 }
 ```
